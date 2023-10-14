@@ -1,47 +1,49 @@
 pipeline {
-agent any
-stages {
-stage ('Build') {
-steps {
-sh '''#!/bin/bash
-python3.7 -m venv test
-source test/bin/activate
-pip install pip --upgrade
-pip install -r requirements.txt
-'''
+    agent any
+    stages {
+        stage ('Build') {
+            steps {
+                sh '''#!/bin/bash
+                python3.7 -m venv test
+                source test/bin/activate
+                pip install pip --upgrade
+                pip install -r requirements.txt
+                '''
+            }
+        }
+        stage ('test') {
+            steps {
+                sh '''#!/bin/bash
+                source test/bin/activate
+                pip install pytest
+                pytest --verbose --junit-xml test-reports/results.xml
+                '''
+            }
+            post {
+                always {
+                    junit 'test-reports/results.xml'
+                }
+            }
+        }
+        stage ('Deploy') {
+            steps {
+                sh '''#!/bin/bash
+                APPLICATION_IP=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=ec2_2" --query "Reservations[*].Instances[*].PublicIpAddress" --output text)
+                ssh -i ~/.ssh/testkey9 -o StrictHostKeyChecking=no ubuntu@$APPLICATION_IP "
+                    curl -O https://raw.githubusercontent.com/djtoler/Deployment5_v1/main/setup.sh
+                    chmod +x setup.sh
+                    ./setup.sh
+                "
+                '''
+            }
+        }
+        stage ('Reminder') {
+            steps {
+                sh '''#!/bin/bash
+                echo -e "##############################################################\n # The Application should be running on your other instance!! #\n ##############################################################"
+                '''
+            }
+        }
+    }
 }
-}
-stage ('test') {
-steps {
-sh '''#!/bin/bash
-source test/bin/activate
-pip install pytest
-pytest --verbose --junit-xml test-reports/results.xml
-'''
-}
-post{
-always {
-junit 'test-reports/results.xml'
-}
-}
-}
-stage ('Deploy') {
-steps {
-sh '''#!/bin/bash
-APPLICATION_IP=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=ec2_2" --query "Reservations[*].Instances[*].PublicIpAddress" --output text)
-ssh -i ~/.ssh/testkey9 -o StrictHostKeyChecking=no ubuntu@$APPLICATION_IP
-curl -O https://raw.githubusercontent.com/djtoler/Deployment5_v1/main/setup.sh
-chmod +x setup.sh
-./setup.sh
-'''
-}
-}
-stage ('Reminder') {
-steps {
-sh '''#!/bin/bash
-echo -e "##############################################################\n # The Application should be running on your other instance!! #\n ##############################################################"
-'''
-}
-}
-}
-}
+
