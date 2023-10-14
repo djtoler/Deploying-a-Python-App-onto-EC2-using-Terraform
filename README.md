@@ -1,5 +1,12 @@
 # Deployment 5
 
+<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/bankingapp.PNG"></p>
+<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/dp5error.PNG"></p>
+<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/htmlchange.PNG"></p>
+<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/jenkinsuserworkaround.PNG"></p>
+<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/jenkinsv1success.PNG"></p>
+<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/jenkinsv2success.PNG"></p>
+
 ## Purpose
 
 ##### The purpose of this deployment was to continue evolving our appliction infrastructure and our deployment methods. In Deployment 4, we moved away from managed services & default infrastructure configurations. 
