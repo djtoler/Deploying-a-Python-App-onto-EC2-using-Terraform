@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''#!/bin/bash
                 APPLICATION_IP=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=ec2_2" --query "Reservations[*].Instances[*].PublicIpAddress" --output text)
-                ssh -i ~/.ssh/testkey9 -o StrictHostKeyChecking=no ubuntu@$APPLICATION_IP "
+                ssh -i ~/.ssh/testkey8 -o StrictHostKeyChecking=no ubuntu@$APPLICATION_IP "
                     cd Deployment5_v1
                     curl -O https://raw.githubusercontent.com/djtoler/Deployment5_v1/main/pkill.sh
                     chmod 777 pkill.sh
@@ -18,7 +18,7 @@ pipeline {
             steps {
                 sh '''#!/bin/bash
                 APPLICATION_IP=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=ec2_2" --query "Reservations[*].Instances[*].PublicIpAddress" --output text)
-                ssh -i ~/.ssh/testkey9 -o StrictHostKeyChecking=no ubuntu@$APPLICATION_IP "
+                ssh -i ~/.ssh/testkey8 -o StrictHostKeyChecking=no ubuntu@$APPLICATION_IP "
                     curl -O https://raw.githubusercontent.com/djtoler/Deployment5_v1/main/setup2.sh
                     chmod 777 setup2.sh
                     ./setup2.sh
