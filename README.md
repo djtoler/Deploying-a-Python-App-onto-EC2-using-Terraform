@@ -43,10 +43,10 @@
 #### What:
 * ##### _VPCs(1), Subnets(2), Availability Zones(2), EC2 Instances(2), Route Tables(1), Security Groups(1)_
 #### How: 
-##### _ARCHITECTURE: We'll start the architcture by implementing a Virtual Private Cloud with an internet gateway to manage our network's ingress and egress traffic. Within this VPC, we'll put two subnets, each with their own Route Table. We'll deploy our Banking application and Jenkins server on separate 2 EC2 instances, each located in a different availability zones. Both instances will be protected by a Security Group that defines what kind of traffic is allowed._
+* ##### _ARCHITECTURE: We'll start the architcture by implementing a Virtual Private Cloud with an internet gateway to manage our network's ingress and egress traffic. Within this VPC, we'll put two subnets, each with their own Route Table. We'll deploy our Banking application and Jenkins server on separate 2 EC2 instances, each located in a different availability zones. Both instances will be protected by a Security Group that defines what kind of traffic is allowed._
 <p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/DP5_Arch_Diagram.png"></p>
 
-##### _DEPLOYMENT: We'll deploy our infrastructure by mapping our architectural requirements to our Terraform configuration files. Terraform uses a conecpt called "resource blocks" that basically standardizes a way to format and define our infrastructure requirements._
+* ##### _DEPLOYMENT: We'll deploy our infrastructure by mapping our architectural requirements to our Terraform configuration files. Terraform uses a conecpt called "resource blocks" that basically standardizes a way to format and define our infrastructure requirements._
 * <p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/ArchitectureDesign_to_TerraformMapping.drawio-3.png"></p>
 
 ### _2. Deploy Infrastructure Using Terraform_
