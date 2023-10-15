@@ -63,11 +63,11 @@
 > #### _We do this for our 2nd EC2 instance also but with a [different user data script](https://github.com/djtoler/terraform_dp5/blob/main/user_data_python.sh) that just installs Python._
 
 #### Both of these user data scripts use the `curl` bash command to download premade scripts for automating our installation tasks. We store them in this repo called [automated installation scripts](https://github.com/djtoler/automated_installation_scripts/tree/main).
-> * #### [Jenkins automated install script](https://github.com/djtoler/automated_installation_scripts/blob/main/auto-jenkins.sh)
-> * #### [Python automated install script](https://github.com/djtoler/automated_installation_scripts/blob/main/auto-python.sh)
-> * #### [AWS CLI automated install script](https://github.com/djtoler/automated_installation_scripts/blob/main/auto-aws_cli.sh)
+> * ##### [Jenkins automated install script](https://github.com/djtoler/automated_installation_scripts/blob/main/auto-jenkins.sh)
+> * ##### [Python automated install script](https://github.com/djtoler/automated_installation_scripts/blob/main/auto-python.sh)
+> * ##### [AWS CLI automated install script](https://github.com/djtoler/automated_installation_scripts/blob/main/auto-aws_cli.sh)
 
-> #### Next, we finish setting up our Jenkins server by SSH'ing into it & switching to the Jenkins user. We download [this script](https://github.com/djtoler/terraform_dp5/blob/main/auto-instance_setup.sh), make it executable, and run it. This script will generate a key that we can use to SSH into our Banking application server from our Jenkins user on our Jenkins server.
+> #### _Next, we finish setting up our Jenkins server by SSH'ing into it & switching to the Jenkins user. We download [this script](https://github.com/djtoler/terraform_dp5/blob/main/auto-instance_setup.sh), make it executable, and run it. This script will generate a key that we can use to SSH into our Banking application server from our Jenkins user on our Jenkins server._
 
 ### _4. Edit Setup & Jenkinsfiles_
 * #### From our local machnine, we edit our `setup.sh` & `setup2.sh` files to setup up our banking application from GitHub repo where our source code is located.
