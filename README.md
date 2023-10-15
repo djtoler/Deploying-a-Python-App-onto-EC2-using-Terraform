@@ -63,7 +63,7 @@
 * ##### _4. [`tf-deploy.sh`](https://github.com/djtoler/terraform_dp5/blob/main/user_data_jenkins_python.sh): This file will allow us to run our terraform deployment from a shell script. Doing it from this script will give us additional automation capabilities in case we wanted to do other things after our infastructure finishes deploying & it saves us time because we dont have to run our Terrafrom deployment commands 1 by 1 in the command line._
 <p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/Screenshot%202023-10-15%20at%202.15.57%20PM.png" width="500"></p>
 
-#### This is how all 4 files work together
+#### _This is how our tf_deploy.sh_
 <p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/dp5_tf_auto.png"></p>
 
 ### _3. Configure Our Application & Jenkins Servers_
