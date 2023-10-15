@@ -53,10 +53,13 @@
 #### To deploy our infrastructure using Terraform, we use 4 files.
 * ##### _1. [`variables.tf`](https://github.com/djtoler/terraform_dp5/blob/main/variables.tf): This file will set up default variables for us to use throughout our Terraform config files_
 <p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/Screenshot%202023-10-15%20at%201.04.23%20PM.png" width="500"></p>
+
 * ##### _2. `x.tfvars`: This file will allow us to alter our variables from their default values when we choose to_
-<p align="center"><img src="hhttps://github.com/djtoler/Deployment5_v1/blob/main/Screenshot%202023-10-15%20at%201.59.34%20PM.png" width="500"></p>
+<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/Screenshot%202023-10-15%20at%201.59.34%20PM.png" width="500"></p>
+
 * ##### _3. [`main.tf`](https://github.com/djtoler/terraform_dp5/blob/main/main.tf): This file is where we'll tell Terrafrom what cloud provider we want to use for our infrastructre deployment and which resources we want to deploy using that provider_
 <p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/dp5error.PNG" width="500"></p>
+
 * ##### _4. [`tf-deploy.sh`](https://github.com/djtoler/terraform_dp5/blob/main/user_data_jenkins_python.sh): This file will allow us to run our terraform deployment from a shell script. Doing it from this script will give us additional automation capabilities in case we wanted to do other things after our infastructure finishes deploying & it saves us time because we dont have to run our Terrafrom deployment commands 1 by 1 in the command line._
 <p align="left"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/Screenshot%202023-10-15%20at%202.15.57%20PM.png" width="500"></p>
 
