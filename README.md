@@ -17,14 +17,15 @@
 
 ### _1. Terraform Build Fails_
 <p align="left"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/dp5error.PNG" width="500"></p>
-* #### _Problem:_
-* #### _Solution:_
-* #### _Takeaway:_
+
+* #### _Problem: Referencing Security Groups in Terraform the wrong way_
+* #### _Solution: _
+* #### _Takeaway:Try to use updated methods from the tools documentation instead of online tutorials_
 
 ### _2. AWS Configuration Issue_
-* #### _Problem:_
-* #### _Solution:_
-* #### _Takeaway:_
+* ##### _Problem: No built in way to set AWS credentials when doing a automated installation. Tried doing a script to make credentials file, it worked but theres a simpler way_
+* #### _Solution: Use an IAM Role that give our EC2 instance permissions to list instance details. Attach the role to our instance and then we wont need credentials_
+* #### _Takeaway: Remember the power of IAM roles and policies and how they can solve permission related problems_
 
 ### _3. Dynamic IP Issue_
 * #### _Problem:_
