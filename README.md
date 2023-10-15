@@ -55,7 +55,7 @@
 * ##### _2. `x.tfvars`: This file will allow us to alter our variables from their default values when we choose to_
 * ##### _3. [`main.tf`](https://github.com/djtoler/terraform_dp5/blob/main/main.tf): This file is where we'll tell Terrafrom what cloud provider we want to use for our infrastructre deployment and which resources we want to deploy using that provider_
 * ##### _4. [`tf-deploy.sh`](https://github.com/djtoler/terraform_dp5/blob/main/user_data_jenkins_python.sh): This file will allow us to run our terraform deployment from a shell script. Doing it from this script will give us additional automation capabilities in case we wanted to do other things after our infastructure finishes deploying & it saves us time because we dont have to run our Terrafrom deployment commands 1 by 1 in the command line._
-<p align="left"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/dp5_tf_auto.png"></p>
+<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/dp5_tf_auto.png"></p>
 
 ### _3. Configure Our Application & Jenkins Servers_
 > #### _In our [`main.tf`](https://github.com/djtoler/terraform_dp5/blob/main/main.tf) file, we also included a [_user data script_](https://github.com/djtoler/terraform_dp5/blob/main/user_data_jenkins_python.sh) that will launch our 1st EC2 instance with Jenkins, Python & the AWS CLI already installed._
