@@ -60,7 +60,7 @@
 
 ### _3. Configure Our Application & Jenkins Servers_
 > #### _In our [`main.tf`](https://github.com/djtoler/terraform_dp5/blob/main/main.tf) file, we also included a [_user data script_](https://github.com/djtoler/terraform_dp5/blob/main/user_data_jenkins_python.sh) that will launch our 1st EC2 instance with Jenkins, Python & the AWS CLI already installed._
-> #### _We do this for our 2nd EC2 instance also but with a (different user data script)[https://github.com/djtoler/terraform_dp5/blob/main/user_data_python.sh] that just installs Python._
+> #### _We do this for our 2nd EC2 instance also but with a [different user data script](https://github.com/djtoler/terraform_dp5/blob/main/user_data_python.sh) that just installs Python._
 
 #### Both of these user data scripts use the `curl` bash command to download premade scripts for automating our installation tasks. We store them in this repo called [automated installation scripts](https://github.com/djtoler/automated_installation_scripts/tree/main).
 > * #### [Jenkins automated install script](https://github.com/djtoler/automated_installation_scripts/blob/main/auto-jenkins.sh)
