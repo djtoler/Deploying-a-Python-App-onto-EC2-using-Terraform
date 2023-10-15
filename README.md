@@ -160,11 +160,11 @@ JENKINS_IP:8080
 ```
 #### Follow the steps outlined in this [configure a Jenkins Multibranch pipeline file](https://github.com/djtoler/automated_installation_scripts/blob/main/manual_jenkinsMultiBranch.txt). Make sure to change Jenkinsfile to Jenkinsfilev1. Also, for the second branch, change Jenkinsfile to Jenkinsfilev2. Run a build from the first branch
 
-<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/jenkinsv1success.PNG" width="500"></p>
+<p align="left"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/jenkinsv1success.PNG" width="500"></p>
 
 #### Visit <application_ip>:5000. We'll see our app there...
 
-<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/bankingapp.PNG" width="500"></p>
+<p align="left"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/bankingapp.PNG" width="500"></p>
 
 ### _6. Edit Banking Application HTML_
 #### SSH into the application server
@@ -179,10 +179,10 @@ JENKINS_IP:8080
 #### Push our new changes to our main branch `git push origin main`
 
 ### A new Jenkins build will be triggered
-<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/jenkinsv2success.PNG" width="500"></p>
+<p align="left"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/jenkinsv2success.PNG" width="500"></p>
 
 ### We can also see our HTML changes
-<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/htmlchange.PNG" width="500"></p>
+<p align="left"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/htmlchange.PNG" width="500"></p>
 
 ## Questions
 #### _How did you decide to run the Jenkinsfilev2?_
