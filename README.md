@@ -38,16 +38,16 @@
 
 ## Steps
 ### _1. Plan Infrastructure Architecture and Deployment_
-#### Where:
+#### Where we'll deploy:
 * ##### _AWS, Us-East-1 Region_
-#### What:
+#### What we'll deploy:
 * ##### _VPCs(1)_
 * ##### _Subnets(2)_
 * ##### _Availability Zones(2)_
 * ##### _EC2 Instances(2)_
 * ##### _Route Tables(1)_
 * ##### _Security Groups(1)_
-#### How: 
+#### How we'll deploy: 
 * #### _ARCHITECTURE: We'll start the architcture by implementing a Virtual Private Cloud with an internet gateway to manage our network's ingress and egress traffic. Within this VPC, we'll put two subnets, each with their own Route Table. We'll deploy our Banking application and Jenkins server on separate 2 EC2 instances, each located in a different availability zones. Both instances will be protected by a Security Group that defines what kind of traffic is allowed._
 * #### _DEPLOYMENT: We'll deploy our infrastructure by mapping our architectural requirements to our Terraform configuration files. Terraform uses a conecpt called "resource blocks" that basically standardizes a way to format and define our infrastructure requirements._
 
@@ -61,11 +61,11 @@
 ### _3. Configure Our Application & Jenkins Servers_
 > #### _In our [`main.tf`](https://github.com/djtoler/terraform_dp5/blob/main/main.tf) file, we also included a [_user data script_](https://github.com/djtoler/terraform_dp5/blob/main/user_data_jenkins_python.sh) that will launch our 1st EC2 instance with Jenkins, Python & the AWS CLI already installed._
 > #### _We do this for our 2nd EC2 instance also but with a [different user data script](https://github.com/djtoler/terraform_dp5/blob/main/user_data_python.sh) that just installs Python._
-#### _Both of these user data scripts use the `curl` bash command to download premade scripts for automating our installation tasks. We store them in this repo called (automated installation scripts)_[https://github.com/djtoler/automated_installation_scripts/tree/main].
-> * #### _(Jenkins automated install script)_[https://github.com/djtoler/automated_installation_scripts/blob/main/auto-jenkins.sh]
-> * #### _(Python automated install script)_[hhttps://github.com/djtoler/automated_installation_scripts/blob/main/auto-python.sh]
-> * #### _(AWS CLI automated install script)_[hhttps://github.com/djtoler/automated_installation_scripts/blob/main/auto-aws_cli.sh]
-> #### _Next, we finish setting up our Jenkins server by SSH'ing into it & switching to the Jenkins user. We download (this script)_[https://github.com/djtoler/terraform_dp5/blob/main/auto-instance_setup.sh], _make it executable and run it. This script will generate a key that we can use to SSH into our Banking application server from our Jenkins user on our Jenkins server._
+#### _Both of these user data scripts use the `curl` bash command to download premade scripts for automating our installation tasks. We store them in this repo called _(automated installation scripts)[https://github.com/djtoler/automated_installation_scripts/tree/main]_.
+> * #### _(Jenkins automated install script)[https://github.com/djtoler/automated_installation_scripts/blob/main/auto-jenkins.sh]_
+> * #### _(Python automated install script)[https://github.com/djtoler/automated_installation_scripts/blob/main/auto-python.sh]_
+> * #### _(AWS CLI automated install script)[https://github.com/djtoler/automated_installation_scripts/blob/main/auto-aws_cli.sh]_
+> #### _Next, we finish setting up our Jenkins server by SSH'ing into it & switching to the Jenkins user. We download (this script)[https://github.com/djtoler/terraform_dp5/blob/main/auto-instance_setup.sh]_, _make it executable and run it. This script will generate a key that we can use to SSH into our Banking application server from our Jenkins user on our Jenkins server._
 
 ### _4. Edit Setup & Jenkinsfiles_
 * #### From our local machnine, we edit our `setup.sh` & `setup2.sh` files to setup up our banking application from GitHub repo where our source code is located.
