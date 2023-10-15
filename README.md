@@ -167,16 +167,16 @@ JENKINS_IP:8080
 <p align="left"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/bankingapp.PNG" width="500"></p>
 
 ### _6. Edit Banking Application HTML_
-#### SSH into the application server
-#### `cd` into the application directory. 
-#### Run `git switch -c dev` to make a new branch and switch to it
-#### `cd` into the templates directory 
-#### Run `nano home.html`. 
-#### Make an edit to the HTML file.
-#### Run `git add .`, `git commit -m'changed html'` & `git push -u origin dev`
-#### Switch back to main branch to merge our new changes `git checkout main`
-#### Merge our new changes `git merge dev`
-#### Push our new changes to our main branch `git push origin main`
+* #### SSH into the application server
+* #### `cd` into the application directory. 
+* #### Run `git switch -c dev` to make a new branch and switch to it
+* #### `cd` into the templates directory 
+* #### Run `nano home.html`. 
+* #### Make an edit to the HTML file.
+* #### Run `git add .`, `git commit -m'changed html'` & `git push -u origin dev`
+* #### Switch back to main branch to merge our new changes `git checkout main`
+* #### Merge our new changes `git merge dev`
+* #### Push our new changes to our main branch `git push origin main`
 
 ### A new Jenkins build will be triggered
 <p align="left"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/jenkinsv2success.PNG" width="500"></p>
