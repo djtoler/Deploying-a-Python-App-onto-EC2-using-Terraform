@@ -1,5 +1,7 @@
 # Deployment 5
 
+<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/Graphic%20Design-7.png"></p>
+
 ## Purpose
 
 ##### The purpose of this deployment was to continue evolving our appliction infrastructure and our deployment methods. In Deployment 4, we moved away from managed services & default infrastructure configurations. 
