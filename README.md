@@ -25,6 +25,8 @@
 * #### _Takeaway:Try to use updated methods from the tools documentation instead of online tutorials_
 
 ### _2. AWS Configuration Issue_
+<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/Screenshot%202023-10-15%20at%2010.42.44%20PM.png"></p>
+
 * ##### _Problem: No built in way to set AWS credentials when doing a automated installation. Tried doing a script to make credentials file, it worked but theres a simpler way_
 * #### _Solution: Use an IAM Role that give our EC2 instance permissions to list instance details. Attach the role to our instance and then we wont need credentials_
 * #### _Takeaway: Remember the power of IAM roles and policies and how they can solve permission related problems_
