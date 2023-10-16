@@ -196,3 +196,8 @@ JENKINS_IP:8080
 
 #### _Should you place both instances in the public subnet? Or should you place them in a private subnet? Explain why?_
 * ##### Both of these instances should 100% be in private subnets. Access to the Jenkins server should be private because Jenkins may have code or other sensitive information stored. The banking application would definitly need to be in a private subnet because they have unlimited amounts of sensitive data
+
+# System Diagram
+<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/dp5Diagram.png"></p>
+
+
