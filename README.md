@@ -18,8 +18,8 @@
 ### _1. Terraform Build Fails_
 <p align="left"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/dp5error.PNG" width="500"></p>
 
-* #### _Problem: Referencing Security Groups in Terraform the wrong way_
-* #### _Solution: _
+* #### _Problem: CIDR blocks were not referenced correctly in my Terraform variables file and it caused a few build failures_
+* #### _Solution: CIDR blocked should be referenced as strings inside of an array_
 * #### _Takeaway:Try to use updated methods from the tools documentation instead of online tutorials_
 
 ### _2. AWS Configuration Issue_
@@ -28,14 +28,9 @@
 * #### _Takeaway: Remember the power of IAM roles and policies and how they can solve permission related problems_
 
 ### _3. Dynamic IP Issue_
-* #### _Problem:_
-* #### _Solution:_
-* #### _Takeaway:_
-
-### _4. Automation Issue_
-* #### _Problem:_
-* #### _Solution:_
-* #### _Takeaway:_
+* #### _Problem: When our instance got disconnected, our hardcoded IP addresses would no longer work for our builds and SSH'ing into our servers_
+* #### _Solution: Use AWS's `ec2 describe` method to pull the curreny IP address. This way we wont have to hard code it and we'll always know its the one attached to our current machine_
+* #### _Takeaway: Try and use methods in our code that more flexible whey components of our systenm are dynamic, such as EC2 IP addresses that arent Elastic IPs_
 
 ## Steps
 ### _1. Plan Infrastructure Architecture and Deployment_
