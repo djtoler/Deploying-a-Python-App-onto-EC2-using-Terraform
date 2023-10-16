@@ -45,6 +45,9 @@
 
 #### What:
 * ##### _VPCs(1), Subnets(2), Availability Zones(2), EC2 Instances(2), Route Tables(1), Security Groups(1)_
+
+<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/Screenshot%202023-10-16%20at%2011.55.03%20AM.png"></p>
+
 #### How: 
 * ##### _ARCHITECTURE: We'll start the architcture by implementing a Virtual Private Cloud with an internet gateway to manage our network's ingress and egress traffic. Within this VPC, we'll put two subnets, each with their own Route Table. We'll deploy our Banking application and Jenkins server on separate 2 EC2 instances, each located in a different availability zones. Both instances will be protected by a Security Group that defines what kind of traffic is allowed._
 <p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/DP5_Arch_Diagram.png"></p>
