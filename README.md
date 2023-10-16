@@ -40,6 +40,9 @@
 ### _1. Plan Infrastructure Architecture and Deployment_
 #### Where:
 * ##### _AWS, Us-East-1 Region_
+
+<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/useast1.png"></p>
+
 #### What:
 * ##### _VPCs(1), Subnets(2), Availability Zones(2), EC2 Instances(2), Route Tables(1), Security Groups(1)_
 #### How: 
