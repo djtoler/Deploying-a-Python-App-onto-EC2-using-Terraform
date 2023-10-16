@@ -61,7 +61,7 @@
 <p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/Screenshot%202023-10-15%20at%201.04.23%20PM.png" width="500"></p>
 
 * ##### _2. `x.tfvars`: This file will allow us to alter our variables from their default values when we choose to_
-<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/Screenshot%202023-10-15%20at%201.59.34%20PM.png" width="500"></p>
+<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/image6-3.png" width="500"></p>
 
 * ##### _3. [`main.tf`](https://github.com/djtoler/terraform_dp5/blob/main/main.tf): This file is where we'll tell Terrafrom what cloud provider we want to use for our infrastructre deployment and which resources we want to deploy using that provider_
 <p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/Screenshot%202023-10-15%20at%201.59.34%20PM.png" width="500"></p>
