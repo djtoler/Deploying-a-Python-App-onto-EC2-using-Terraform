@@ -154,7 +154,27 @@ nano Jenkinsfilev2
             }
 ```
 
-### _5. Configure Multi-Branch Jenkins Pipeline_
+### _5. Install CloudWatch for CPU Monitoring_
+<p align="center"><img src="https://github.com/djtoler/Deployment5_v1/blob/main/Screenshot-from-2022-01-03-14-01-22.png"></p>
+
+#### We can download this script that will make a CloudWatch config file and install a CloudWatch agent.This will help us monitor how our CPU is performing and alarm us when it reaches a certain threshold. We can then take whatever actions necessary to make sure our continues to run according to our needs.
+#### [CloudWatch Automated Installation Script](https://github.com/djtoler/automated_installation_scripts/blob/main/auto-cloud%20watch_config.sh)
+
+#### This script will take 4 arguments...
+* ##### How many seconds per logging interval = 60 seconds
+* ##### Which system user to use = ubunu user
+* ##### What directory to write the logs to = /var/log/syslog
+* ##### What group the logs belong to syslog
+  
+#### We can use it like this...
+
+```
+curl -O https://raw.githubusercontent.com/djtoler/automated_installation_scripts/main/auto-cloud%20watch_config.sh
+chmod +x auto-cloudwatch_config.sh
+./auto-cloudwatch_config.sh 60 ubuntu /var/log/syslog syslog
+```
+
+### _6. Configure Multi-Branch Jenkins Pipeline_
 #### Run this command to get our current IP address.
 ```
 JENKINS_IP=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=ec2_1" --query "Reservations[*].Instances[*].PublicIpAddress" --output text)
